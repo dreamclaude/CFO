@@ -37,9 +37,8 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-          <span style={{ color: '#CC2027', fontWeight: 800, fontSize: '18px', letterSpacing: '0.05em' }}>CFO</span>
-          <span style={{ color: '#CBD5E1', fontWeight: 600, fontSize: '10px', letterSpacing: '0.15em' }}>ON THE GO PRO</span>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <img src="/logo.png" alt="CFO On The Go Pro" style={{ height: '48px', width: 'auto' }} />
         </Link>
 
         {/* Desktop Links */}
