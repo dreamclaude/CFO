@@ -1,70 +1,67 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
-    <footer
-      className="px-6 lg:px-10 py-12 border-t"
-      style={{ background: "var(--ink-900)", borderColor: "rgba(228,224,213,0.08)" }}
-    >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-        {/* Brand */}
-        <div>
-          <p
-            className="text-paper-50 font-bold mb-1"
-            style={{ fontSize: "0.875rem", fontFamily: "var(--font-inter, sans-serif)" }}
-          >
-            CFO On the Go Pro
-          </p>
-          <p className="eyebrow" style={{ color: "var(--paper-200)", opacity: 0.45 }}>
-            Strategy · Planning · Tax
-          </p>
-        </div>
+    <footer style={{ backgroundColor: '#0D1B2E', borderTop: '1px solid #1B2A4A', padding: '48px 24px 32px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '40px', marginBottom: '40px' }}>
+          {/* Brand */}
+          <div>
+            <div style={{ marginBottom: '12px' }}>
+              <span style={{ color: '#CC2027', fontWeight: 800, fontSize: '20px', letterSpacing: '0.05em' }}>CFO</span>
+              <span style={{ color: '#CBD5E1', fontWeight: 600, fontSize: '12px', letterSpacing: '0.15em', display: 'block' }}>ON THE GO PRO</span>
+            </div>
+            <p style={{ color: '#64748B', fontSize: '13px', lineHeight: 1.6 }}>
+              CFO-level financial strategy for families, professionals, and business owners.
+            </p>
+          </div>
 
-        {/* Lending entity */}
-        <div>
-          <p
-            className="text-paper-50 font-bold mb-1"
-            style={{ fontSize: "0.875rem", fontFamily: "var(--font-inter, sans-serif)" }}
-          >
-            Intelligent Finance Specialists
-          </p>
-          <p className="eyebrow" style={{ color: "var(--ledger-blue)" }}>
-            Credit · Lending · Mortgage Broking
-          </p>
-        </div>
+          {/* Pages */}
+          <div>
+            <h4 style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '16px', letterSpacing: '0.05em' }}>PAGES</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <Link href="/" style={{ color: '#64748B', textDecoration: 'none', fontSize: '14px' }}>Home</Link>
+              <Link href="/about" style={{ color: '#64748B', textDecoration: 'none', fontSize: '14px' }}>About</Link>
+              <Link href="/services" style={{ color: '#64748B', textDecoration: 'none', fontSize: '14px' }}>Services</Link>
+              <Link href="/strategy-session" style={{ color: '#64748B', textDecoration: 'none', fontSize: '14px' }}>Strategy Session</Link>
+              <Link href="/referral-partners" style={{ color: '#64748B', textDecoration: 'none', fontSize: '14px' }}>Referral Partners</Link>
+            </div>
+          </div>
 
-        {/* Disclosure */}
-        <div>
-          <p
-            className="type-caption text-paper-200 leading-relaxed"
-            style={{ opacity: 0.45, fontFamily: "var(--font-inter, sans-serif)" }}
-          >
-            CFO On the Go Pro and Intelligent Finance Specialists are separate entities.
-            Credit advice is provided by Intelligent Finance Specialists only.
-            General financial information on this site does not constitute personal
-            financial advice.
-          </p>
-        </div>
-      </div>
-
-      <div
-        className="max-w-7xl mx-auto mt-10 pt-6 border-t flex flex-wrap items-center justify-between gap-4"
-        style={{ borderColor: "rgba(228,224,213,0.06)" }}
-      >
-        <p className="eyebrow" style={{ color: "var(--paper-200)", opacity: 0.3 }}>
-          © {new Date().getFullYear()} CFO On the Go Pro. All rights reserved.
-        </p>
-        <div className="flex gap-6">
-          {["Privacy Policy", "Terms of Use", "Credit Guide"].map((l) => (
-            <a
-              key={l}
-              href="#"
-              className="eyebrow hover:text-paper-50 transition-colors"
-              style={{ color: "var(--paper-200)", opacity: 0.3 }}
+          {/* Contact */}
+          <div>
+            <h4 style={{ color: 'white', fontSize: '14px', fontWeight: 600, marginBottom: '16px', letterSpacing: '0.05em' }}>GET STARTED</h4>
+            <Link
+              href="/strategy-session"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#CC2027',
+                color: 'white',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontSize: '14px',
+                fontWeight: 600,
+              }}
             >
-              {l}
-            </a>
-          ))}
+              Book Strategy Session
+            </Link>
+          </div>
+        </div>
+
+        {/* Compliance */}
+        <div style={{ borderTop: '1px solid #1B2A4A', paddingTop: '24px' }}>
+          <p style={{ color: '#475569', fontSize: '12px', lineHeight: 1.7, marginBottom: '8px' }}>
+            Strategy services: CFO On The Go Pro Pty Ltd | Credit services: Intelligent Finance Specialists | These are separate entities providing separate services.
+          </p>
+          <p style={{ color: '#475569', fontSize: '12px', lineHeight: 1.7 }}>
+            All advice and services are subject to individual circumstances, regulatory requirements, and responsible lending obligations. General information only &mdash; not personal financial advice. Past results are not indicative of future outcomes.
+          </p>
+          <p style={{ color: '#334155', fontSize: '12px', marginTop: '16px' }}>
+            &copy; {new Date().getFullYear()} CFO On The Go Pro Pty Ltd. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }

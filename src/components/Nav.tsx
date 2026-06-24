@@ -1,68 +1,129 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-
-const links = [
-  { label: "STRATEGY", href: "#strategy" },
-  { label: "ABOUT", href: "#about" },
-  { label: "WHO IT'S FOR", href: "#who" },
-];
+'use client'
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-ink-900/95 backdrop-blur-sm border-b border-paper-200/10" : "bg-transparent"
-      }`}
+    <nav
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        backgroundColor: scrolled ? '#0D1B2E' : 'transparent',
+        borderBottom: scrolled ? '1px solid #1B2A4A' : 'none',
+        transition: 'background-color 0.3s ease, border-bottom 0.3s ease',
+        padding: '0 24px',
+      }}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        {/* Wordmark */}
-        <a href="#" className="flex flex-col leading-none">
-          <span
-            className="text-paper-50 font-bold tracking-tight"
-            style={{ fontSize: "0.9rem", fontFamily: "var(--font-inter, sans-serif)" }}
-          >
-            CFO ON THE GO PRO
-          </span>
-          <span className="eyebrow" style={{ marginTop: "2px" }}>
-            Strategy-First Property Finance
-          </span>
-        </a>
+      <div
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          height: '72px',
+        }}
+      >
+        {/* Logo */}
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+          <span style={{ color: '#CC2027', fontWeight: 800, fontSize: '18px', letterSpacing: '0.05em' }}>CFO</span>
+          <span style={{ color: '#CBD5E1', fontWeight: 600, fontSize: '10px', letterSpacing: '0.15em' }}>ON THE GO PRO</span>
+        </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="eyebrow hover:text-paper-50 transition-colors">
-              {l.label}
-            </a>
-          ))}
+        {/* Desktop Links */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
+          <Link href="/" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Home</Link>
+          <Link href="/about" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>About</Link>
+          <Link href="/services" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Services</Link>
+          <Link href="/referral-partners" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Partners</Link>
+          <Link
+            href="/strategy-session"
+            style={{
+              backgroundColor: '#CC2027',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontSize: '14px',
+              fontWeight: 600,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Book Strategy Session
+          </Link>
         </div>
 
-        {/* CTA */}
-        <a
-          href="#book"
-          className="inline-flex items-center gap-2 px-5 py-2.5 text-ink-950 font-semibold rounded-sm transition-all duration-200 hover:scale-[1.02]"
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
           style={{
-            background: "var(--signal)",
-            fontSize: "0.8125rem",
-            letterSpacing: "0.04em",
+            background: 'none',
+            border: 'none',
+            color: 'white',
+            cursor: 'pointer',
+            display: 'none',
+          }}
+          className="mobile-menu-btn"
+          aria-label="Toggle menu"
+        >
+          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', marginBottom: '5px', transition: '0.3s' }} />
+          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', marginBottom: '5px', transition: '0.3s' }} />
+          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', transition: '0.3s' }} />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          style={{
+            backgroundColor: '#0D1B2E',
+            padding: '16px 24px 24px',
+            borderTop: '1px solid #1B2A4A',
           }}
         >
-          Book a Consultation
-        </a>
-      </nav>
-    </motion.header>
-  );
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <Link href="/" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link href="/about" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/services" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Services</Link>
+            <Link href="/referral-partners" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Partners</Link>
+            <Link
+              href="/strategy-session"
+              style={{
+                backgroundColor: '#CC2027',
+                color: 'white',
+                padding: '12px 20px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontSize: '15px',
+                fontWeight: 600,
+                textAlign: 'center',
+              }}
+              onClick={() => setMenuOpen(false)}
+            >
+              Book Strategy Session
+            </Link>
+          </div>
+        </div>
+      )}
+
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-nav { display: none !important; }
+          .mobile-menu-btn { display: block !important; }
+        }
+      `}</style>
+    </nav>
+  )
 }

@@ -1,23 +1,35 @@
-import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
-import HandoffLine from "@/components/HandoffLine";
-import WhoItsFor from "@/components/WhoItsFor";
-import CTABand from "@/components/CTABand";
-import Footer from "@/components/Footer";
+import HeroHome from '@/components/HeroHome'
+import TheShift from '@/components/TheShift'
+import PositioningStatement from '@/components/PositioningStatement'
+import WhyUs from '@/components/WhyUs'
+import WealthSystems from '@/components/WealthSystems'
+import BlueprintFramework from '@/components/BlueprintFramework'
+import FastracSection from '@/components/FastracSection'
+import From30to10 from '@/components/From30to10'
+import WhoWeHelp from '@/components/WhoWeHelp'
+import SocialProof from '@/components/SocialProof'
+import CTABand from '@/components/CTABand'
 
-export default function Home() {
+export const metadata = {
+  title: 'CFO On The Go Pro | Build Wealth Like a Business',
+  description:
+    'We help families, professionals, and business owners build structured 3–4 property portfolios and SMSF strategies using proven CFO-level financial systems.',
+}
+
+export default function HomePage() {
   return (
     <>
-      <Nav />
-      <main>
-        <Hero />
-        <Problem />
-        <HandoffLine />
-        <WhoItsFor />
-        <CTABand />
-      </main>
-      <Footer />
+      <HeroHome />
+      <TheShift />
+      <PositioningStatement />
+      <WhyUs />
+      <WealthSystems />
+      <BlueprintFramework />
+      <FastracSection />
+      <From30to10 />
+      <WhoWeHelp />
+      <SocialProof />
+      <CTABand />
     </>
-  );
+  )
 }
