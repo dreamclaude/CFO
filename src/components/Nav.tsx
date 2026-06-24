@@ -37,8 +37,56 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <img src="/logo.png" alt="CFO On The Go Pro" style={{ height: '48px', width: 'auto' }} />
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+          {/* Arrow icon mark */}
+          <div style={{ position: 'relative', width: '36px', height: '36px', flexShrink: 0 }}>
+            {/* Background glow */}
+            <div style={{
+              position: 'absolute', inset: 0, borderRadius: '8px',
+              background: 'linear-gradient(135deg, rgba(204,32,39,0.15), rgba(25,149,196,0.1))',
+            }} />
+            <svg viewBox="0 0 36 36" width="36" height="36" fill="none">
+              {/* Arrow 1 — teal */}
+              <path d="M6 26L14 14L18 19" stroke="#1995C4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Arrow 2 — orange */}
+              <path d="M11 26L20 12L24 18" stroke="#E8821A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Arrow 3 — green */}
+              <path d="M16 26L26 10L30 16" stroke="#3D8B37" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Arrow 4 — red (foremost) */}
+              <path d="M21 28L30 14" stroke="#CC2027" strokeWidth="2.5" strokeLinecap="round"/>
+              <path d="M26 14L30 14L30 18" stroke="#CC2027" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          {/* Wordmark */}
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+              <span style={{
+                color: '#CC2027',
+                fontWeight: 900,
+                fontSize: '22px',
+                letterSpacing: '-0.01em',
+                lineHeight: 1,
+              }}>CFO</span>
+              <span style={{
+                color: '#FFFFFF',
+                fontWeight: 700,
+                fontSize: '13px',
+                letterSpacing: '0.04em',
+                lineHeight: 1,
+              }}>ON THE GO PRO</span>
+            </div>
+            <span style={{
+              color: 'rgba(255,255,255,0.45)',
+              fontSize: '9px',
+              fontWeight: 500,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              marginTop: '3px',
+            }}>
+              Guiding Families &amp; Businesses
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
