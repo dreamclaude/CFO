@@ -7,9 +7,27 @@ export default function Footer() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '40px', marginBottom: '40px' }}>
           {/* Brand */}
           <div>
-            <div style={{ marginBottom: '12px' }}>
-              <span style={{ color: '#CC2027', fontWeight: 800, fontSize: '20px', letterSpacing: '0.05em' }}>CFO</span>
-              <span style={{ color: '#CBD5E1', fontWeight: 600, fontSize: '12px', letterSpacing: '0.15em', display: 'block' }}>ON THE GO PRO</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+              {/* Mini arrow icon */}
+              <div style={{ position: 'relative', width: '32px', height: '32px', flexShrink: 0 }}>
+                <div style={{ position: 'absolute', inset: 0, borderRadius: '6px', background: 'rgba(204,32,39,0.12)' }} />
+                <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+                  <path d="M6 26L14 14L18 19" stroke="#1995C4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M11 26L20 12L24 18" stroke="#E8821A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M16 26L26 10L30 16" stroke="#3D8B37" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M21 28L30 14" stroke="#CC2027" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M26 14L30 14L30 18" stroke="#CC2027" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                  <span style={{ color: '#CC2027', fontWeight: 900, fontSize: '18px', letterSpacing: '-0.01em' }}>CFO</span>
+                  <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '11px', letterSpacing: '0.05em' }}>ON THE GO PRO</span>
+                </div>
+                <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '2px' }}>
+                  Guiding Families &amp; Businesses
+                </p>
+              </div>
             </div>
             <p style={{ color: '#64748B', fontSize: '13px', lineHeight: 1.6 }}>
               CFO-level financial strategy for families, professionals, and business owners.
