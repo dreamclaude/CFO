@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import createGlobe from "cobe";
 import { useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -9,77 +9,92 @@ export function Globe({ className }: { className?: string }) {
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
   const rafRef = useRef<number>(0);
+  const [ready, setReady] = useState(false);
 
   const r = useMotionValue(0);
   const rs = useSpring(r, { mass: 1, damping: 30, stiffness: 100, restDelta: 0.001 });
 
   useEffect(() => {
-    let phi = 3.8;
-    let width = 0;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const onResize = () => {
-      if (canvasRef.current) width = canvasRef.current.offsetWidth;
-    };
-    window.addEventListener("resize", onResize);
-    onResize();
+    // Wait until the canvas actually has dimensions (it may be 0 on first render
+    // if the parent grid is still laying out, especially on mobile).
+    const observer = new ResizeObserver((entries) => {
+      const width = entries[0]?.contentRect.width ?? 0;
+      if (width < 10) return; // not visible yet
 
-    // Light blue: [0.4, 0.85, 1.0]
-    const lb: [number, number, number] = [0.4, 0.85, 1.0];
+      observer.disconnect();
+      setReady(true);
 
-    const globe = createGlobe(canvasRef.current!, {
-      devicePixelRatio: 2,
-      width: width * 2,
-      height: width * 2,
-      phi: 3.8,
-      theta: -0.28,
-      dark: 1,
-      diffuse: 0.6,
-      mapSamples: 20000,
-      mapBrightness: 1.4,
-      baseColor: [0.08, 0.14, 0.22],
-      markerColor: lb,
-      glowColor: [0.098, 0.584, 0.769],
-      markers: [
-        { location: [-33.8688, 151.2093], size: 0.055 }, // Sydney
-        { location: [-37.8136, 144.9631], size: 0.05  }, // Melbourne
-        { location: [-27.4698, 153.0251], size: 0.042 }, // Brisbane
-        { location: [-31.9505, 115.8605], size: 0.038 }, // Perth
-        { location: [-34.9285, 138.6007], size: 0.036 }, // Adelaide
-        { location: [-35.2809, 149.1300], size: 0.028 }, // Canberra
-        { location: [-42.8821, 147.3272], size: 0.026 }, // Hobart
-        { location: [-12.4634, 130.8456], size: 0.026 }, // Darwin
-      ],
-      arcs: [
-        { from: [-33.8688, 151.2093], to: [-37.8136, 144.9631], color: lb }, // Sydney–Melbourne
-        { from: [-33.8688, 151.2093], to: [-27.4698, 153.0251], color: lb }, // Sydney–Brisbane
-        { from: [-33.8688, 151.2093], to: [-35.2809, 149.1300], color: lb }, // Sydney–Canberra
-        { from: [-37.8136, 144.9631], to: [-34.9285, 138.6007], color: lb }, // Melbourne–Adelaide
-        { from: [-37.8136, 144.9631], to: [-42.8821, 147.3272], color: lb }, // Melbourne–Hobart
-        { from: [-37.8136, 144.9631], to: [-35.2809, 149.1300], color: lb }, // Melbourne–Canberra
-        { from: [-34.9285, 138.6007], to: [-31.9505, 115.8605], color: lb }, // Adelaide–Perth
-        { from: [-27.4698, 153.0251], to: [-12.4634, 130.8456], color: lb }, // Brisbane–Darwin
-        { from: [-31.9505, 115.8605], to: [-12.4634, 130.8456], color: lb }, // Perth–Darwin
-      ],
-      arcColor: lb,
-      arcWidth: 1.2,
-      arcHeight: 0.35,
+      let phi = 3.8;
+      const lb: [number, number, number] = [0.4, 0.85, 1.0];
+      const dpr = Math.min(window.devicePixelRatio, 2); // cap at 2 for performance
+
+      const globe = createGlobe(canvas, {
+        devicePixelRatio: dpr,
+        width: width * dpr,
+        height: width * dpr,
+        phi: 3.8,
+        theta: -0.28,
+        dark: 1,
+        diffuse: 0.6,
+        mapSamples: 16000,
+        mapBrightness: 1.4,
+        baseColor: [0.08, 0.14, 0.22],
+        markerColor: lb,
+        glowColor: [0.098, 0.584, 0.769],
+        markers: [
+          { location: [-33.8688, 151.2093], size: 0.055 },
+          { location: [-37.8136, 144.9631], size: 0.05  },
+          { location: [-27.4698, 153.0251], size: 0.042 },
+          { location: [-31.9505, 115.8605], size: 0.038 },
+          { location: [-34.9285, 138.6007], size: 0.036 },
+          { location: [-35.2809, 149.1300], size: 0.028 },
+          { location: [-42.8821, 147.3272], size: 0.026 },
+          { location: [-12.4634, 130.8456], size: 0.026 },
+        ],
+        arcs: [
+          { from: [-33.8688, 151.2093], to: [-37.8136, 144.9631], color: lb },
+          { from: [-33.8688, 151.2093], to: [-27.4698, 153.0251], color: lb },
+          { from: [-33.8688, 151.2093], to: [-35.2809, 149.1300], color: lb },
+          { from: [-37.8136, 144.9631], to: [-34.9285, 138.6007], color: lb },
+          { from: [-37.8136, 144.9631], to: [-42.8821, 147.3272], color: lb },
+          { from: [-37.8136, 144.9631], to: [-35.2809, 149.1300], color: lb },
+          { from: [-34.9285, 138.6007], to: [-31.9505, 115.8605], color: lb },
+          { from: [-27.4698, 153.0251], to: [-12.4634, 130.8456], color: lb },
+          { from: [-31.9505, 115.8605], to: [-12.4634, 130.8456], color: lb },
+        ],
+        arcColor: lb,
+        arcWidth: 1.2,
+        arcHeight: 0.35,
+      });
+
+      function animate() {
+        if (!pointerInteracting.current) phi += 0.003;
+        globe.update({
+          phi: phi + rs.get(),
+          width: canvas!.offsetWidth * dpr,
+          height: canvas!.offsetWidth * dpr,
+        });
+        rafRef.current = requestAnimationFrame(animate);
+      }
+      rafRef.current = requestAnimationFrame(animate);
+
+      // clean up when component unmounts
+      (canvas as any).__globeDestroy = () => {
+        globe.destroy();
+        cancelAnimationFrame(rafRef.current);
+      };
     });
 
-    function animate() {
-      if (!pointerInteracting.current) phi += 0.003;
-      globe.update({
-        phi: phi + rs.get(),
-        width: width * 2,
-        height: width * 2,
-      });
-      rafRef.current = requestAnimationFrame(animate);
-    }
-    rafRef.current = requestAnimationFrame(animate);
+    observer.observe(canvas);
 
     return () => {
-      globe.destroy();
+      observer.disconnect();
       cancelAnimationFrame(rafRef.current);
-      window.removeEventListener("resize", onResize);
+      const destroy = (canvas as any).__globeDestroy;
+      if (destroy) destroy();
     };
   }, [rs]);
 
@@ -87,7 +102,16 @@ export function Globe({ className }: { className?: string }) {
     <canvas
       ref={canvasRef}
       className={cn(className)}
-      style={{ width: "100%", height: "100%", maxWidth: "100%", aspectRatio: "1", cursor: "grab" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        maxWidth: "100%",
+        aspectRatio: "1",
+        cursor: "grab",
+        // keep canvas invisible until globe initialises to avoid white flash
+        opacity: ready ? 1 : 0,
+        transition: "opacity 0.4s ease",
+      }}
       onPointerDown={(e) => {
         pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
         if (canvasRef.current) canvasRef.current.style.cursor = "grabbing";

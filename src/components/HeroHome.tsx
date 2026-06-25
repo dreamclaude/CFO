@@ -229,6 +229,7 @@ export default function HeroHome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.48 }}
             style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '48px' }}
+            className="hero-ctas"
           >
             <Link
               href="/strategy-session"
@@ -418,9 +419,20 @@ export default function HeroHome() {
         @media (max-width: 900px) {
           .hero-grid {
             grid-template-columns: 1fr !important;
+            padding-top: 80px !important;
           }
           .hero-visual {
             display: none !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .hero-ctas {
+            flex-direction: column !important;
+            gap: 10px !important;
+          }
+          .hero-ctas a {
+            width: 100% !important;
+            justify-content: center !important;
           }
         }
       `}</style>

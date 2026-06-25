@@ -46,47 +46,49 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
       style={{
         backgroundColor: 'white',
         borderRadius: '16px',
-        padding: '24px 28px',
+        padding: '18px 20px',
         display: 'flex',
         alignItems: 'center',
-        gap: '20px',
+        gap: '14px',
         boxShadow: hovered
           ? '0 16px 48px rgba(13,27,46,0.18), 0 4px 12px rgba(13,27,46,0.08)'
           : '0 4px 16px rgba(13,27,46,0.07)',
-        transform: hovered ? 'translateX(6px)' : 'translateX(0)',
+        transform: hovered ? 'translateX(4px)' : 'translateX(0)',
         transition: 'all 0.28s ease',
         cursor: 'default',
         borderLeft: `4px solid ${step.accent}`,
+        overflow: 'hidden',
       }}
     >
-      {/* Large number */}
+      {/* Large number — fluid size so it never overflows */}
       <div
         style={{
-          minWidth: '72px',
-          fontSize: '52px',
+          flexShrink: 0,
+          fontSize: 'clamp(30px, 7vw, 48px)',
           fontWeight: 900,
           color: step.accent,
           lineHeight: 1,
           letterSpacing: '-2px',
+          whiteSpace: 'nowrap',
         }}
       >
         {step.number}
       </div>
 
       {/* Separator */}
-      <div style={{ fontSize: '24px', color: '#CBD5E1', fontWeight: 300, flexShrink: 0 }}>
+      <div style={{ fontSize: '18px', color: '#CBD5E1', fontWeight: 300, flexShrink: 0 }}>
         &rarr;
       </div>
 
       {/* Content */}
-      <div style={{ flex: 1 }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', flexWrap: 'wrap' }}>
           {step.label && (
-            <span style={{ fontSize: '15px', color: '#94A3B8', fontWeight: 500 }}>{step.label}</span>
+            <span style={{ fontSize: '13px', color: '#94A3B8', fontWeight: 500 }}>{step.label}</span>
           )}
           <span
             style={{
-              fontSize: '20px',
+              fontSize: '17px',
               fontWeight: 800,
               color: step.accent,
               letterSpacing: '-0.3px',
@@ -99,19 +101,6 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
           {step.sublabel}
         </p>
       </div>
-
-      {/* Right accent dot */}
-      <div
-        style={{
-          width: '10px',
-          height: '10px',
-          borderRadius: '50%',
-          backgroundColor: step.accent,
-          opacity: hovered ? 1 : 0.35,
-          transition: 'opacity 0.28s',
-          flexShrink: 0,
-        }}
-      />
     </motion.div>
   )
 }

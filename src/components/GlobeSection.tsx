@@ -182,6 +182,7 @@ export default function GlobeSection() {
         >
           {/* Outer ring */}
           <div
+            className="globe-outer-ring"
             style={{
               position: "absolute",
               inset: "-16px",
@@ -192,6 +193,7 @@ export default function GlobeSection() {
           />
           {/* Inner ring */}
           <div
+            className="globe-inner-ring"
             style={{
               position: "absolute",
               inset: "8px",
@@ -210,6 +212,7 @@ export default function GlobeSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6, ease: EASE }}
+            className="globe-chip"
             style={{
               position: "absolute",
               bottom: "12%",
@@ -255,6 +258,24 @@ export default function GlobeSection() {
         @media (max-width: 860px) {
           .globe-grid {
             grid-template-columns: 1fr !important;
+            gap: 48px !important;
+          }
+          .globe-outer-ring,
+          .globe-inner-ring {
+            display: none !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .globe-grid {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+          .globe-chip {
+            left: 0 !important;
+            bottom: 0 !important;
+            position: static !important;
+            margin-top: 16px !important;
+            display: inline-block !important;
           }
         }
       `}</style>
