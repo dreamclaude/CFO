@@ -11,7 +11,7 @@ const idealFor = [
   'Have a mortgage over $400K+',
   'Want to build investment assets',
   'Feel you are performing well but not truly accelerating',
-  'Want structure and accountability — not guesswork',
+  'Want structure and accountability - not guesswork',
 ]
 
 const callSteps = [
@@ -31,7 +31,7 @@ const callSteps = [
     num: '03',
     accent: '#3D8B37',
     title: 'Strategic Roadmap',
-    items: ['3–5 year financial acceleration model outline', 'Key milestones and measurable targets', 'Risk controls and contingency positions', 'Clear next steps and implementation pathway'],
+    items: ['3 - 5 year financial acceleration model outline', 'Key milestones and measurable targets', 'Risk controls and contingency positions', 'Clear next steps and implementation pathway'],
   },
 ]
 

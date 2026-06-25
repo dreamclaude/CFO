@@ -28,7 +28,7 @@ const tiers = [
     ctaHref: '/strategy-session',
   },
   {
-    tier: 'Tier 2 — Core',
+    tier: 'Tier 2 - Core',
     name: 'Wealth Structuring',
     accent: '#E8821A',
     features: [
@@ -42,7 +42,7 @@ const tiers = [
     ctaHref: '/strategy-session',
   },
   {
-    tier: 'Tier 3 — Premium',
+    tier: 'Tier 3 - Premium',
     name: 'Ongoing CFO Advisory',
     accent: '#CC2027',
     features: [
@@ -61,12 +61,12 @@ const systemsDeep = [
   {
     accent: '#1995C4',
     title: 'Property Acquisition Strategy',
-    body: 'Our property acquisition strategy begins long before you find a property. We assess your full financial position, optimise your borrowing capacity, and design an acquisition sequence that aligns to your 3-5 year wealth plan. Every purchase is strategic — not reactive. We consider entity structuring, tax implications, serviceability, and portfolio balance before any commitment is made.',
+    body: 'Our property acquisition strategy begins long before you find a property. We assess your full financial position, optimise your borrowing capacity, and design an acquisition sequence that aligns to your 3 - 5 year wealth plan. Every purchase is strategic - not reactive. We consider entity structuring, tax implications, serviceability, and portfolio balance before any commitment is made.',
   },
   {
     accent: '#E8821A',
     title: 'Debt Structuring & Optimisation',
-    body: 'Debt is not simply a number — it is a tool. The way your debt is structured determines your flexibility, your tax position, and your ability to accelerate. We restructure existing lending, introduce offset strategies, implement debt recycling where appropriate, and model the impact on your long-term wealth trajectory. The goal is not just to reduce debt — it is to make every dollar work harder.',
+    body: 'Debt is not simply a number - it is a tool. The way your debt is structured determines your flexibility, your tax position, and your ability to accelerate. We restructure existing lending, introduce offset strategies, implement debt recycling where appropriate, and model the impact on your long-term wealth trajectory. The goal is not just to reduce debt - it is to make every dollar work harder.',
   },
   {
     accent: '#3D8B37',
@@ -76,7 +76,7 @@ const systemsDeep = [
   {
     accent: '#CC2027',
     title: 'Ongoing CFO Advisory',
-    body: 'Strategy without implementation is just planning. Our ongoing CFO Advisory ensures your financial roadmap stays on track through quarterly performance reviews, net worth tracking, cash flow reforecasting, and course correction as life changes. Think of it as having a personal CFO on retainer — proactive, strategic, and accountable.',
+    body: 'Strategy without implementation is just planning. Our ongoing CFO Advisory ensures your financial roadmap stays on track through quarterly performance reviews, net worth tracking, cash flow reforecasting, and course correction as life changes. Think of it as having a personal CFO on retainer - proactive, strategic, and accountable.',
   },
 ]
 

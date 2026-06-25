@@ -17,24 +17,24 @@ const partnerTypes = [
 
 const clientBenefits = [
   { accent: '#1995C4', title: 'CFO-Level Strategy', body: 'Your clients receive executive-level financial planning applied to their personal wealth journey.' },
-  { accent: '#E8821A', title: 'Integrated Lending Solutions', body: 'Strategy and credit capability working together — not in isolation.' },
-  { accent: '#3D8B37', title: 'Structured Debt Reduction', body: 'Modelled pathways to reduce mortgage terms from 30 years to 10–12 years, where suitable.' },
-  { accent: '#CC2027', title: 'SMSF Strategic Integration', body: 'SMSF incorporated into the broader financial blueprint — not treated as a standalone product.' },
+  { accent: '#E8821A', title: 'Integrated Lending Solutions', body: 'Strategy and credit capability working together - not in isolation.' },
+  { accent: '#3D8B37', title: 'Structured Debt Reduction', body: 'Modelled pathways to reduce mortgage terms from 30 years to 10 – 12 years, where suitable.' },
+  { accent: '#CC2027', title: 'SMSF Strategic Integration', body: 'SMSF incorporated into the broader financial blueprint-not treated as a standalone product.' },
   { accent: '#D4A017', title: 'Quarterly CFO Reviews', body: 'Ongoing accountability, reforecasting, and course correction. Not set-and-forget.' },
 ]
 
 const ourCommitments = [
   'Transparent communication throughout the engagement',
   'Deep respect for your existing client relationships',
-  'Clear scope boundaries — we do not cross into your service area',
-  'Compliance-aligned processes at every stage',
+  'Clear scope boundaries-we do not cross into your service area',
+  'Compliance - aligned processes at every stage',
   'Agreed referral arrangements where appropriate',
 ]
 
 const idealClient = [
   'High-income professionals and executives',
   'Business owners and ABN holders',
-  'Property accumulators targeting 3–4 properties',
+  'Property accumulators targeting 3 - 4 properties',
   'Families with mortgages over $400K+',
   'Clients seeking structure, accountability, and long-term direction',
 ]
