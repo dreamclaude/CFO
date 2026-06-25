@@ -164,7 +164,7 @@ export default function From30to10() {
                   letterSpacing: '-4px',
                 }}
               >
-                10&ndash;12
+                10 - 12
               </span>
               <span
                 style={{
@@ -225,7 +225,7 @@ export default function From30to10() {
               letterSpacing: '-0.5px',
             }}
           >
-            From 30 Years to 10. This Is Not a Dream &mdash; It&apos;s a System.
+            From 30 Years to 10. This Is Not a Dream - It - s a System.
           </h2>
 
           <p
@@ -236,7 +236,7 @@ export default function From30to10() {
               marginBottom: '40px',
             }}
           >
-            Most Australians accept a 30-year mortgage. We don&apos;t. With structure, discipline, and strategic modelling, many of our clients work toward becoming debt-free in 8&ndash;12 years while simultaneously building investment assets. That changes retirement. That changes freedom.
+            Most Australians accept a 30-year mortgage. We don't. With structure, discipline, and strategic modelling, many of our clients work toward becoming debt-free in 8 - 12 years while simultaneously building investment assets. That changes retirement. That changes freedom.
           </p>
 
           {/* Vertical timeline */}

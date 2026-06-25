@@ -41,7 +41,7 @@ export default function AboutPage() {
               Your Personal CFO for Wealth Creation
             </h1>
             <p style={{ fontSize: 'clamp(18px, 2vw, 22px)', color: '#1995C4', fontWeight: 600 }}>
-              We are Financial Architects &mdash; not brokers.
+              We are Financial Architects - not brokers.
             </p>
           </motion.div>
         </div>
@@ -56,7 +56,7 @@ export default function AboutPage() {
               Built from 30 Years of Corporate CFO Experience
             </h2>
             <p style={{ fontSize: '17px', color: '#475569', lineHeight: 1.9, marginBottom: '32px' }}>
-              For three decades, Nalin (Rukmal) Wijesooriya worked at the highest levels of business finance &mdash; helping corporations grow revenue, manage risk, and build long-term wealth. He watched businesses thrive because they had one thing most households lack: structure. A qualified CFO to map the vision. A financial system to execute it. A review process to keep it on track. Then he asked a simple question: Why can&apos;t families have the same?
+              For three decades, Nalin (Rukmal) Wijesooriya worked at the highest levels of business finance - helping corporations grow revenue, manage risk, and build long-term wealth. He watched businesses thrive because they had one thing most households lack: structure. A qualified CFO to map the vision. A financial system to execute it. A review process to keep it on track. Then he asked a simple question: Why can&apos;t families have the same?
             </p>
             <blockquote
               style={{
@@ -67,7 +67,7 @@ export default function AboutPage() {
               }}
             >
               <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 700, color: 'white', fontStyle: 'italic' }}>
-                &ldquo;Families fail financially not because of income &mdash; but because of lack of structure.&rdquo;
+                &ldquo;Families fail financially not because of income - but because of lack of structure.&rdquo;
               </p>
             </blockquote>
           </Section>

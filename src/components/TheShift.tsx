@@ -18,7 +18,7 @@ const steps = [
     accent: '#E8821A',
   },
   {
-    number: '3–4',
+    number: '3 - 4',
     label: 'properties',
     result: 'Portfolio',
     sublabel: 'A real asset base with moving parts',
@@ -185,7 +185,7 @@ export default function TheShift() {
               letterSpacing: '-1px',
             }}
           >
-            If You Own Multiple Properties &mdash; You&apos;re Already Running a Business
+            If You Own Multiple Properties - You&apos;re Already Running a Business
           </motion.h2>
 
           <motion.p
@@ -199,7 +199,7 @@ export default function TheShift() {
               marginBottom: '48px',
             }}
           >
-            Most investors never make this mental shift. They manage properties like assets. We help you manage them like a CFO &mdash; with systems, structure, and strategy at every stage.
+            Most investors never make this mental shift. They manage properties like assets. We help you manage them like a CFO - with systems, structure, and strategy at every stage.
           </motion.p>
 
           {/* Quote callout */}
@@ -224,7 +224,7 @@ export default function TheShift() {
                 marginBottom: '12px',
               }}
             >
-              &ldquo;The difference between stress and financial freedom is not income &mdash; it is structure.&rdquo;
+              &ldquo;The difference between stress and financial freedom is not income - it is structure.&rdquo;
             </p>
             <span
               style={{

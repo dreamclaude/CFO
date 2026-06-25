@@ -59,7 +59,7 @@ export default function Hero() {
         >
           Strategy first. Lending second.
           <br />
-          Most investors get this backwards — and pay for it for years.
+          Most investors get this backwards- and pay for it for years.
         </motion.p>
 
         {/* CTA row */}

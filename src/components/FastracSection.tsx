@@ -302,7 +302,7 @@ export default function FastracSection() {
               letterSpacing: '-0.5px',
             }}
           >
-            Turning 30-Year Plans into Structured Wealth Pathways.
+            Turning 30 - Year Plans into Structured Wealth Pathways.
           </h2>
 
           <p
@@ -337,7 +337,7 @@ export default function FastracSection() {
             margin: '0 auto',
           }}
         >
-          Where suitable and appropriate. Subject to individual circumstances. Strategy-led and compliance-aligned.
+          Where suitable and appropriate. Subject to individual circumstances. Strategy - led and compliance - aligned.
         </motion.p>
       </div>
     </section>

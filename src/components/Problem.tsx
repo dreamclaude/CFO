@@ -7,7 +7,7 @@ const mistakes = [
   {
     num: "01",
     title: "Going to the bank first",
-    detail: "Getting borrowing capacity before you know what you actually need — letting the bank frame the question.",
+    detail: "Getting borrowing capacity before you know what you actually need - letting the bank frame the question.",
   },
   {
     num: "02",
@@ -17,7 +17,7 @@ const mistakes = [
   {
     num: "03",
     title: "No long-term strategy",
-    detail: "Buying a single property with no exit plan or sequencing — then wondering why equity is stuck.",
+    detail: "Buying a single property with no exit plan or sequencing - then wondering why equity is stuck.",
   },
   {
     num: "04",
@@ -27,7 +27,7 @@ const mistakes = [
   {
     num: "05",
     title: "Ignoring tax and SMSF",
-    detail: "Missing the SMSF window or mis-timing depreciation schedules — paying for it at the worst possible moment.",
+    detail: "Missing the SMSF window or mis-timing depreciation schedules - paying for it at the worst possible moment.",
   },
   {
     num: "06",

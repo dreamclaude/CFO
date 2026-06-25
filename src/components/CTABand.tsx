@@ -120,7 +120,7 @@ export default function CTABand() {
               margin: '0 auto 44px',
             }}
           >
-            Book a Strategy Session and receive a clear financial direction &mdash; not just a loan approval.
+            Book a Strategy Session and receive a clear financial direction - not just a loan approval.
           </p>
 
           {/* Buttons */}

@@ -18,7 +18,7 @@ export default function PositioningStatement() {
         >
           Most accountants look <span style={{ color: '#CC2027', fontWeight: 700 }}>backward</span>.
           Most brokers focus on the <span style={{ color: '#CC2027', fontWeight: 700 }}>transaction</span>.
-          We operate like your personal <span style={{ color: '#1995C4', fontWeight: 700 }}>CFO</span> &mdash; forward-focused, strategic, and accountable.
+          We operate like your personal <span style={{ color: '#1995C4', fontWeight: 700 }}>CFO</span> - forward-focused, strategic, and accountable.
         </motion.p>
       </div>
     </section>

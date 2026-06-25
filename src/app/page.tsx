@@ -13,7 +13,7 @@ import CTABand from '@/components/CTABand'
 export const metadata = {
   title: 'CFO On The Go Pro | Build Wealth Like a Business',
   description:
-    'We help families, professionals, and business owners build structured 3 - 4 property portfolios and SMSF strategies using proven CFO-level financial systems.',
+    'We help families, professionals, and business owners build structured 3 - 4 property portfolios and SMSF strategies using proven CFO - level financial systems.',
 }
 
 export default function HomePage() {

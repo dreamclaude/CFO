@@ -155,8 +155,8 @@ export default function WhyUs() {
             transition={{ duration: 0.5, delay: 0.8 }}
             style={{
               position: 'absolute',
-              bottom: '-24px',
-              left: '-24px',
+              bottom: '-63px',
+              left: '-60px',
               background: '#CC2027',
               borderRadius: '16px',
               padding: '16px 24px',

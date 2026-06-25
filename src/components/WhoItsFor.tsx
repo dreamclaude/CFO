@@ -6,7 +6,7 @@ import { useRef } from "react";
 const profiles = [
   {
     label: "STAGE",
-    title: "2–4 investment properties",
+    title: "2 - 4 investment properties",
     body: "You've made one or two moves. The next one is more complex, and the stakes are higher. You need a plan, not a product.",
   },
   {
@@ -16,13 +16,13 @@ const profiles = [
   },
   {
     label: "SITUATION",
-    title: "Income is there — structure isn't",
+    title: "Income is there - structure isn't",
     body: "Your earnings support more, but you're unclear on whether to go in personal name, a trust, or through super. These decisions compound.",
   },
   {
     label: "GOAL",
     title: "Wealth through property, long term",
-    body: "Not a quick flip. A sequenced portfolio that still looks smart in fifteen years — with the tax position to match.",
+    body: "Not a quick flip. A sequenced portfolio that still looks smart in fifteen years - with the tax position to match.",
   },
 ];
 
