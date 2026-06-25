@@ -221,19 +221,10 @@ export default function BlueprintFramework() {
           </p>
         </motion.div>
 
-        {/* Timeline — horizontal */}
-        <div
-          style={{
-            position: 'relative',
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'center',
-            gap: '0',
-            marginBottom: '72px',
-          }}
-        >
+        {/* Timeline — horizontal on desktop, vertical on mobile */}
+        <div className="blueprint-timeline" style={{ marginBottom: '72px' }}>
           {steps.map((step, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'flex-start', flex: i === steps.length - 1 ? '1.3' : '1' }}>
+            <div key={i} className="blueprint-step-wrap">
               <StepNode step={step} index={i} inView={inView} isLast={i === steps.length - 1} />
 
               {/* Connector between steps */}
@@ -242,34 +233,72 @@ export default function BlueprintFramework() {
                   initial={{ scaleX: 0 }}
                   animate={inView ? { scaleX: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + i * 0.12 }}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginTop: '50px',
-                    flex: '0 0 40px',
-                    transformOrigin: 'left',
-                  }}
+                  className="blueprint-connector"
                 >
-                  <div
-                    style={{
-                      flex: 1,
-                      height: '1px',
-                      borderTop: '2px dashed #1B2A4A',
-                    }}
-                  />
-                  <div
-                    style={{
-                      borderTop: '5px solid transparent',
-                      borderBottom: '5px solid transparent',
-                      borderLeft: '7px solid #1B2A4A',
-                      flexShrink: 0,
-                    }}
-                  />
+                  <div style={{ flex: 1, height: '1px', borderTop: '2px dashed #1B2A4A' }} />
+                  <div style={{ borderTop: '5px solid transparent', borderBottom: '5px solid transparent', borderLeft: '7px solid #1B2A4A', flexShrink: 0 }} />
                 </motion.div>
               )}
             </div>
           ))}
         </div>
+
+        <style>{`
+          .blueprint-timeline {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0;
+          }
+          .blueprint-step-wrap {
+            display: flex;
+            align-items: flex-start;
+            flex: 1;
+          }
+          .blueprint-step-wrap:last-child { flex: 1.3; }
+          .blueprint-connector {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            flex: 0 0 32px;
+            transform-origin: left;
+          }
+          @media (max-width: 640px) {
+            .blueprint-timeline {
+              flex-direction: column;
+              align-items: stretch;
+              gap: 0;
+            }
+            .blueprint-step-wrap {
+              flex-direction: column !important;
+              align-items: center !important;
+              flex: unset !important;
+            }
+            .blueprint-step-wrap:last-child { flex: unset !important; }
+            .blueprint-connector {
+              flex-direction: column !important;
+              flex: unset !important;
+              margin-top: 0 !important;
+              height: 32px;
+              width: auto;
+              align-items: center;
+            }
+            .blueprint-connector > div:first-child {
+              border-top: none !important;
+              border-left: 2px dashed #1B2A4A;
+              width: 1px;
+              height: 100%;
+              flex: 1;
+            }
+            .blueprint-connector > div:last-child {
+              border-left: 5px solid transparent !important;
+              border-right: 5px solid transparent !important;
+              border-top: 7px solid #1B2A4A !important;
+              border-bottom: none !important;
+            }
+          }
+        `}</style>
 
         {/* Banner card */}
         <motion.div
