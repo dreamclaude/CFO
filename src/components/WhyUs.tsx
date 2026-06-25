@@ -156,7 +156,7 @@ export default function WhyUs() {
             style={{
               position: 'absolute',
               bottom: '-24px',
-              left: '24px',
+              left: '-24px',
               background: '#CC2027',
               borderRadius: '16px',
               padding: '16px 24px',
@@ -199,7 +199,7 @@ export default function WhyUs() {
               letterSpacing: '-0.5px',
             }}
           >
-            Led by a Triple-Qualified Financial Strategist
+            Led by a Triple - Qualified Financial Strategist
           </h2>
 
           <p
@@ -210,7 +210,7 @@ export default function WhyUs() {
               marginBottom: '36px',
             }}
           >
-            We bring CFO-level financial strategy &mdash; traditionally reserved for large corporations &mdash; directly into your personal wealth journey. For 30+ years, we&apos;ve helped businesses achieve structured growth. Now we apply the same proven frameworks to families and investors.
+            We bring CFO-level financial strategy - traditionally reserved for large corporations - directly into your personal wealth journey. For 30+ years, we've helped businesses achieve structured growth. Now we apply the same proven frameworks to families and investors.
           </p>
 
           {/* Credential pills */}
