@@ -115,7 +115,7 @@ export default function TheShift() {
     <section
       style={{
         backgroundColor: '#F0F2F7',
-        padding: 'clamp(80px, 10vw, 120px) 24px 80px',
+        padding: 'clamp(64px, 8vw, 108px) 24px 80px',
         position: 'relative',
         overflow: 'hidden',
       }}

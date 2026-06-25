@@ -422,6 +422,7 @@ export default function HeroHome() {
           .hero-grid {
             grid-template-columns: 1fr !important;
             padding-top: 0 !important;
+            min-height: auto !important;
           }
           .hero-visual {
             display: none !important;
@@ -430,7 +431,7 @@ export default function HeroHome() {
         @media (max-width: 640px) {
           .hero-left {
             padding-top: 28px !important;
-            padding-bottom: 40px !important;
+            padding-bottom: 36px !important;
           }
           .hero-pill span:last-child {
             font-size: 10px !important;
@@ -445,10 +446,18 @@ export default function HeroHome() {
             justify-content: center !important;
           }
           .hero-trust {
+            justify-content: center !important;
             gap: 0 !important;
+            flex-wrap: wrap !important;
           }
           .hero-trust > div {
-            flex: 1 !important;
+            flex: 0 0 auto !important;
+          }
+          .hero-trust > div > div {
+            padding: 0 12px !important;
+          }
+          .hero-trust span {
+            padding: 0 12px !important;
           }
         }
       `}</style>
