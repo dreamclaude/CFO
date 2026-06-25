@@ -20,7 +20,7 @@ export default function WhyUs() {
     <section
       style={{
         backgroundColor: '#0D1B2E',
-        padding: '108px 24px',
+        padding: '108px 23px',
         position: 'relative',
         overflow: 'hidden',
       }}
