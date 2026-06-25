@@ -38,6 +38,7 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
 
   return (
     <motion.div
+      className={step.number.length > 5 ? 'step-card-long' : ''}
       initial={{ opacity: 0, x: -40 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.55, delay: 0.3 + index * 0.12 }}
@@ -118,6 +119,20 @@ export default function TheShift() {
         overflow: 'hidden',
       }}
     >
+      <style>{`
+        @media (max-width: 640px) {
+          .step-card-long {
+            flex-wrap: wrap;
+          }
+          .step-card-long .step-content {
+            min-width: 100% !important;
+            margin-top: -10px;
+          }
+          .step-card-long .step-arrow {
+            display: none;
+          }
+        }
+      `}</style>
       {/* Subtle diagonal accent at bottom */}
       <div
         style={{

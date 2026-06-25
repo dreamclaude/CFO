@@ -150,7 +150,7 @@ export default function HeroHome() {
       >
 
         {/* ── LEFT: Text ── */}
-        <div style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+        <div className="hero-text" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
 
           {/* Credential pill */}
           <motion.div

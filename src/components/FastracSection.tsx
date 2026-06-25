@@ -181,7 +181,7 @@ export default function FastracSection() {
     <section
       style={{
         backgroundColor: '#0D1B2E',
-        padding: '108px 24px',
+        padding: 'clamp(48px, 8vw, 108px) 24px',
         position: 'relative',
         overflow: 'hidden',
       }}
