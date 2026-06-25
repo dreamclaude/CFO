@@ -25,7 +25,7 @@ export default function Footer() {
                   <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '11px', letterSpacing: '0.05em' }}>ON THE GO PRO</span>
                 </div>
                 <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '2px' }}>
-                  Guiding Families &amp; Businesses
+                  Guiding Families - Businesses
                 </p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Footer() {
             Strategy services: CFO On The Go Pro Pty Ltd | Credit services: Intelligent Finance Specialists | These are separate entities providing separate services.
           </p>
           <p style={{ color: '#475569', fontSize: '12px', lineHeight: 1.7 }}>
-            All advice and services are subject to individual circumstances, regulatory requirements, and responsible lending obligations. General information only &mdash; not personal financial advice. Past results are not indicative of future outcomes.
+            All advice and services are subject to individual circumstances, regulatory requirements, and responsible lending obligations. General information only - not personal financial advice. Past results are not indicative of future outcomes.
           </p>
           <p style={{ color: '#334155', fontSize: '12px', marginTop: '16px' }}>
             &copy; {new Date().getFullYear()} CFO On The Go Pro Pty Ltd. All rights reserved.

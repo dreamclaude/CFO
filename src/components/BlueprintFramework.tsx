@@ -217,7 +217,7 @@ export default function BlueprintFramework() {
               lineHeight: 1.7,
             }}
           >
-            Every client engagement follows this structured pathway &mdash; where suitable and appropriate.
+            Every client engagement follows this structured pathway - where suitable and appropriate.
           </p>
         </motion.div>
 
@@ -311,7 +311,7 @@ export default function BlueprintFramework() {
                 letterSpacing: '-2px',
               }}
             >
-              10&ndash;12 yrs
+              10 - 12 yrs
             </div>
           </div>
           <div style={{ maxWidth: '420px' }}>

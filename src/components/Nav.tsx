@@ -1,8 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Nav() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -20,8 +22,8 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 100,
-        backgroundColor: scrolled ? '#0D1B2E' : 'transparent',
-        borderBottom: scrolled ? '1px solid #1B2A4A' : 'none',
+        backgroundColor: 'white',
+        borderBottom: '1px solid #E2E8F0',
         transition: 'background-color 0.3s ease, border-bottom 0.3s ease',
         padding: '0 24px',
       }}
@@ -69,7 +71,7 @@ export default function Nav() {
                 lineHeight: 1,
               }}>CFO</span>
               <span style={{
-                color: '#FFFFFF',
+                color: '#0D1B2E',
                 fontWeight: 700,
                 fontSize: '13px',
                 letterSpacing: '0.04em',
@@ -77,24 +79,24 @@ export default function Nav() {
               }}>ON THE GO PRO</span>
             </div>
             <span style={{
-              color: 'rgba(255,255,255,0.45)',
+              color: '#64748B',
               fontSize: '9px',
               fontWeight: 500,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               marginTop: '3px',
             }}>
-              Guiding Families &amp; Businesses
+              Guiding Families - Businesses
             </span>
           </div>
         </Link>
 
         {/* Desktop Links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
-          <Link href="/" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Home</Link>
-          <Link href="/about" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>About</Link>
-          <Link href="/services" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Services</Link>
-          <Link href="/referral-partners" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Partners</Link>
+          <Link href="/" style={{ color: pathname === '/' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '14px', fontWeight: pathname === '/' ? 700 : 500 }}>Home</Link>
+          <Link href="/about" style={{ color: pathname === '/about' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '14px', fontWeight: pathname === '/about' ? 700 : 500 }}>About</Link>
+          <Link href="/services" style={{ color: pathname === '/services' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '14px', fontWeight: pathname === '/services' ? 700 : 500 }}>Services</Link>
+          <Link href="/referral-partners" style={{ color: pathname === '/referral-partners' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '14px', fontWeight: pathname === '/referral-partners' ? 700 : 500 }}>Partners</Link>
           <Link
             href="/strategy-session"
             style={{
@@ -118,16 +120,16 @@ export default function Nav() {
           style={{
             background: 'none',
             border: 'none',
-            color: 'white',
+            color: '#0D1B2E',
             cursor: 'pointer',
             display: 'none',
           }}
           className="mobile-menu-btn"
           aria-label="Toggle menu"
         >
-          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', marginBottom: '5px', transition: '0.3s' }} />
-          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', marginBottom: '5px', transition: '0.3s' }} />
-          <div style={{ width: '24px', height: '2px', backgroundColor: 'white', transition: '0.3s' }} />
+          <div style={{ width: '24px', height: '2px', backgroundColor: '#0D1B2E', marginBottom: '5px', transition: '0.3s' }} />
+          <div style={{ width: '24px', height: '2px', backgroundColor: '#0D1B2E', marginBottom: '5px', transition: '0.3s' }} />
+          <div style={{ width: '24px', height: '2px', backgroundColor: '#0D1B2E', transition: '0.3s' }} />
         </button>
       </div>
 
@@ -135,16 +137,16 @@ export default function Nav() {
       {menuOpen && (
         <div
           style={{
-            backgroundColor: '#0D1B2E',
+            backgroundColor: 'white',
             padding: '16px 24px 24px',
-            borderTop: '1px solid #1B2A4A',
+            borderTop: '1px solid #E2E8F0',
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <Link href="/" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link href="/about" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>About</Link>
-            <Link href="/services" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Services</Link>
-            <Link href="/referral-partners" style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: '15px' }} onClick={() => setMenuOpen(false)}>Partners</Link>
+            <Link href="/" style={{ color: pathname === '/' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '15px', fontWeight: pathname === '/' ? 700 : 400 }} onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link href="/about" style={{ color: pathname === '/about' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '15px', fontWeight: pathname === '/about' ? 700 : 400 }} onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/services" style={{ color: pathname === '/services' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '15px', fontWeight: pathname === '/services' ? 700 : 400 }} onClick={() => setMenuOpen(false)}>Services</Link>
+            <Link href="/referral-partners" style={{ color: pathname === '/referral-partners' ? '#1995C4' : '#0D1B2E', textDecoration: 'none', fontSize: '15px', fontWeight: pathname === '/referral-partners' ? 700 : 400 }} onClick={() => setMenuOpen(false)}>Partners</Link>
             <Link
               href="/strategy-session"
               style={{

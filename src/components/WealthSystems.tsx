@@ -15,7 +15,7 @@ const systems: System[] = [
   {
     accent: '#1995C4',
     title: 'Property Acquisition Strategy',
-    body: 'Borrowing capacity optimisation and smart structuring before every purchase. No guesswork — a clear roadmap.',
+    body: 'Borrowing capacity optimisation and smart structuring before every purchase. No guesswork - a clear roadmap.',
     number: '01',
     features: ['Borrowing Capacity Audit', 'Pre-purchase Structuring', 'Acquisition Roadmap'],
     icon: (
@@ -45,7 +45,7 @@ const systems: System[] = [
   {
     accent: '#3D8B37',
     title: 'SMSF Wealth Strategy',
-    body: 'Use superannuation as a long-term wealth engine. Property inside super, tax-effective retirement wealth built deliberately.',
+    body: 'Use superannuation as a long term wealth engine. Property inside super, tax-effective retirement wealth built deliberately.',
     number: '03',
     features: ['SMSF Setup & Integration', 'Tax Efficiency Planning', 'Retirement Wealth Design'],
     icon: (
@@ -59,7 +59,7 @@ const systems: System[] = [
   {
     accent: '#CC2027',
     title: 'Ongoing CFO Advisory',
-    body: 'Strategic guidance, quarterly reviews, and course correction. We do not set and forget — your wealth deserves active oversight.',
+    body: 'Strategic guidance, quarterly reviews, and course correction. We do not set and forget - your wealth deserves active oversight.',
     number: '04',
     features: ['Quarterly Reviews', 'KPI Tracking', 'Strategic Recalibration'],
     icon: (

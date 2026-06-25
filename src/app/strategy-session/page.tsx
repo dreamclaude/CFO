@@ -113,7 +113,7 @@ export default function StrategySessionPage() {
                 <div style={{ position: 'absolute', top: '24px', right: '24px', color: '#1B2A4A', fontSize: '48px', fontWeight: 900, lineHeight: 1 }}>{step.num}</div>
                 <div style={{ width: '4px', height: '48px', backgroundColor: step.accent, borderRadius: '2px', marginBottom: '24px' }} />
                 <h3 style={{ color: 'white', fontSize: '1.25rem', fontWeight: 700, marginBottom: '20px' }}>
-                  Step {step.num} &mdash; {step.title}
+                  Step {step.num} - {step.title}
                 </h3>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {step.items.map((item) => (

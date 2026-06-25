@@ -18,7 +18,7 @@ const statChips = [
   {
     stat: 'SMSF',
     unit: 'integrated',
-    label: 'Superannuation integrated into long-term wealth strategy',
+    label: 'Superannuation integrated into long term wealth strategy',
     accent: '#D4A017',
   },
 ]

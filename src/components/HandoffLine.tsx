@@ -145,15 +145,15 @@ export default function HandoffLine() {
               <p className="type-body text-paper-200 mb-6" style={{ fontFamily: "var(--font-inter, sans-serif)" }}>
                 Before a single loan application is lodged, we work through your full
                 financial picture: tax position, entity structure, equity map, and a
-                sequenced property plan built around your income — not a product.
+                sequenced property plan built around your income - not a product.
               </p>
 
               <ul className="space-y-3">
                 {[
                   "Review your current position honestly",
-                  "Build a 5–10 year property roadmap",
+                  "Build a 5 - 10 year property roadmap",
                   "Model tax, SMSF, and ownership structure",
-                  "Identify when — and whether — to borrow",
+                  "Identify when - and whether - to borrow",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 type-caption text-paper-200">
                     <span
@@ -193,7 +193,7 @@ export default function HandoffLine() {
               </h3>
               <p className="type-body text-paper-200 mb-6" style={{ fontFamily: "var(--font-inter, sans-serif)" }}>
                 Once the strategy is clear, Intelligent Finance Specialists handles the
-                credit side — lender selection, structure, and application — with the
+                credit side - lender selection, structure, and application - with the
                 full context of your plan already in place.
               </p>
 

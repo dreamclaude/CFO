@@ -220,7 +220,7 @@ export default function HeroHome() {
               maxWidth: '500px',
             }}
           >
-            We help families, professionals, and business owners grow their businesses whilst building structured 3&ndash;4 property portfolios and SMSF strategies — using the same CFO frameworks that run corporations.
+            We help families, professionals, and business owners grow their businesses whilst building structured 3 - 4 property portfolios and SMSF strategies - using the same CFO frameworks that run corporations.
           </motion.p>
 
           {/* CTA buttons */}
@@ -382,7 +382,7 @@ export default function HeroHome() {
             label="Triple Qualified"
             accent="#1995C4"
             delay={1.1}
-            style={{ top: '18%', left: '-60px', minWidth: '180px' }}
+            style={{ top: '-10px', left: '-50px', minWidth: '180px' }}
           />
           <StatCard
             value="30+ yrs"

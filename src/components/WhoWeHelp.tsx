@@ -45,9 +45,9 @@ const groups = [
   },
   {
     title: 'Property Investors',
-    body: 'Stuck at 1–2 properties. Ready to build a real portfolio system.',
+    body: 'Stuck at 1 - 2 properties. Ready to build a real portfolio system.',
     accent: '#CC2027',
-    have: '1–2 investment properties',
+    have: '1 - 2 investment properties',
     need: 'A scalable portfolio system',
     icon: (
       <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
@@ -318,7 +318,7 @@ export default function WhoWeHelp() {
               margin: '0 auto',
             }}
           >
-            &ldquo;Families fail financially not because of income &mdash; but because of lack of structure.&rdquo;
+            &ldquo;Families fail financially not because of income - but because of lack of structure.&rdquo;
           </p>
         </motion.div>
       </div>
