@@ -24,7 +24,7 @@ const credentials = [
   { label: 'ACA', full: 'Associate Chartered Accountant (ANZ)' },
   { label: 'CGMA', full: 'Chartered Global Management Accountant' },
   { label: 'Diploma', full: 'Diploma in Finance & Mortgage Broking' },
-  { label: '30+', full: 'Years CFO-level financial experience' },
+  { label: '30+', full: 'Years CFO level financial experience' },
 ]
 
 const businessNeeds = ['Vision', 'Cash flow management', 'Debt strategy', 'Investment planning', 'Risk management', 'Regular performance reviews']
@@ -185,7 +185,7 @@ export default function AboutPage() {
               The Financial GPS Model&#8482;
             </h2>
             <p style={{ fontSize: '17px', color: '#CBD5E1', lineHeight: 1.9, marginBottom: '40px' }}>
-              We don&apos;t just advise. We model. We structure. We implement. We review quarterly. We course-correct.
+              We don&apos;t just advise. We model. We structure. We implement. We review quarterly. We course correct.
               That&apos;s why we call it the Financial GPS Model&#8482;.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap', marginBottom: '48px' }}>
