@@ -218,7 +218,7 @@ export default function From30to10() {
           <h2
             style={{
               fontSize: 'clamp(26px, 3.2vw, 44px)',
-              fontWeight: 900,
+              fontWeight: 800,
               color: 'white',
               lineHeight: 1.2,
               marginBottom: '24px',

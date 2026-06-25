@@ -145,7 +145,7 @@ function FastracCard({
       </div>
 
       {/* Content side */}
-      <div style={{ flex: 1, padding: '28px 32px', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, padding: '28px 32px 28px' }}>
         <h3
           style={{
             fontSize: '17px',
@@ -162,45 +162,11 @@ function FastracCard({
             fontSize: '14px',
             color: '#94A3B8',
             lineHeight: 1.7,
-            flex: 1,
-            marginBottom: '20px',
           }}
         >
           {item.body}
         </p>
 
-        {/* Progress bar */}
-        <div>
-          <div
-            style={{
-              height: '3px',
-              backgroundColor: 'rgba(255,255,255,0.06)',
-              borderRadius: '2px',
-              overflow: 'hidden',
-            }}
-          >
-            <motion.div
-              initial={{ width: 0 }}
-              animate={inView ? { width: `${item.progress}%` } : { width: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 + index * 0.08 }}
-              style={{
-                height: '100%',
-                backgroundColor: item.accent,
-                borderRadius: '2px',
-              }}
-            />
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginTop: '6px',
-            }}
-          >
-            <span style={{ fontSize: '10px', color: '#475569' }}>Progress toward freedom</span>
-            <span style={{ fontSize: '10px', color: item.accent, fontWeight: 600 }}>{item.progress}%</span>
-          </div>
-        </div>
       </div>
     </motion.div>
   )
@@ -218,8 +184,6 @@ export default function FastracSection() {
         padding: '108px 24px',
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage:
-          'repeating-linear-gradient(135deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 40px)',
       }}
     >
       <div style={{ maxWidth: '900px', margin: '0 auto' }} ref={ref}>
@@ -244,58 +208,40 @@ export default function FastracSection() {
             Proprietary System
           </span>
 
-          {/* Letter badges */}
-          <div
+          <motion.h3
+            initial={{ opacity: 0, y: 12 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
             style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '8px',
-              flexWrap: 'wrap',
-              marginBottom: '20px',
+              fontSize: 'clamp(38px, 6vw, 72px)',
+              fontWeight: 800,
+              color: 'white',
+              letterSpacing: '-2px',
+              lineHeight: 1,
+              marginBottom: '12px',
             }}
           >
-            {word.split('').map((letter, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 + i * 0.06 }}
-                style={{
-                  width: '56px',
-                  height: '56px',
-                  borderRadius: '14px',
-                  backgroundColor: letterColors[letter] || '#1995C4',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  fontWeight: 900,
-                  color: 'white',
-                  boxShadow: `0 4px 16px ${letterColors[letter] || '#1995C4'}44`,
-                }}
-              >
-                {letter}
-              </motion.div>
-            ))}
-          </div>
+            F.A.S.T.R.A.C
+            <span style={{ color: '#CC2027', fontSize: '0.5em', verticalAlign: 'super', fontWeight: 700 }}>™</span>
+          </motion.h3>
 
           <p
             style={{
               fontSize: '13px',
-              fontWeight: 700,
-              color: '#64748B',
-              letterSpacing: '0.2em',
+              fontWeight: 600,
+              color: '#475569',
+              letterSpacing: '0.16em',
               textTransform: 'uppercase',
               marginBottom: '24px',
             }}
           >
-            Financial Acceleration System&#8482;
+            Financial Acceleration System
           </p>
 
           <h2
             style={{
               fontSize: 'clamp(24px, 3.5vw, 42px)',
-              fontWeight: 900,
+              fontWeight: 800,
               color: 'white',
               lineHeight: 1.2,
               marginBottom: '20px',
