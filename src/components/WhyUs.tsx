@@ -70,24 +70,18 @@ export default function WhyUs() {
               boxShadow: '0 32px 80px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.2)',
             }}
           >
-            {/* Person silhouette SVG */}
-            <svg
-              viewBox="0 0 300 480"
+            {/* Owner photo */}
+            <img
+              src="/owner-photo.jpg"
+              alt="Nalin (Rukmal) Wijesooriya — CFO On The Go Pro"
               style={{
-                position: 'absolute',
-                bottom: 0,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '260px',
-                opacity: 0.07,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center top',   // keeps face in frame
+                borderRadius: '16px',
               }}
-            >
-              <circle cx="150" cy="90" r="55" fill="white" />
-              <path
-                d="M60 480 C60 330 100 280 150 270 C200 280 240 330 240 480 Z"
-                fill="white"
-              />
-            </svg>
+            />
 
             {/* Overlay gradient at bottom */}
             <div
