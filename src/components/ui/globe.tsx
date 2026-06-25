@@ -38,10 +38,10 @@ export function Globe({ className }: { className?: string }) {
         phi: 3.8,
         theta: -0.28,
         dark: 1,
-        diffuse: 0.6,
+        diffuse: 1.2,
         mapSamples: 16000,
-        mapBrightness: 1.4,
-        baseColor: [0.08, 0.14, 0.22],
+        mapBrightness: 3.5,
+        baseColor: [0.18, 0.62, 0.88],
         markerColor: lb,
         glowColor: [0.098, 0.584, 0.769],
         markers: [
