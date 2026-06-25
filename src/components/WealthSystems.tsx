@@ -100,24 +100,6 @@ function SystemCard({ sys, index, inView }: { sys: System; index: number; inView
         flexDirection: 'column',
       }}
     >
-      {/* Watermark number */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '-8px',
-          right: '16px',
-          fontSize: '80px',
-          fontWeight: 900,
-          color: sys.accent,
-          opacity: 0.08,
-          lineHeight: 1,
-          letterSpacing: '-4px',
-          userSelect: 'none',
-        }}
-      >
-        {sys.number}
-      </div>
-
       {/* Icon */}
       <div style={{ marginBottom: '20px' }}>{sys.icon}</div>
 
@@ -229,7 +211,7 @@ export default function WealthSystems() {
           <h2
             style={{
               fontSize: 'clamp(28px, 4vw, 52px)',
-              fontWeight: 900,
+              fontWeight: 800,
               color: '#0D1B2E',
               lineHeight: 1.15,
               marginBottom: '16px',

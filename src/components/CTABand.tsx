@@ -25,46 +25,15 @@ export default function CTABand() {
         backgroundSize: '400% 400%',
       }}
     >
-      {/* Diagonal stripe texture */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            'repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 32px)',
-          pointerEvents: 'none',
-        }}
-      />
-
       {/* Gradient overlay for depth */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.15) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.12) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
-
-      {/* Decorative background word */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontSize: 'clamp(80px, 18vw, 200px)',
-          fontWeight: 900,
-          color: 'white',
-          opacity: 0.045,
-          letterSpacing: '-8px',
-          userSelect: 'none',
-          pointerEvents: 'none',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        FREEDOM
-      </div>
 
       <div
         ref={ref}
@@ -100,7 +69,7 @@ export default function CTABand() {
           <h2
             style={{
               fontSize: 'clamp(28px, 4.5vw, 56px)',
-              fontWeight: 900,
+              fontWeight: 800,
               color: 'white',
               lineHeight: 1.15,
               marginBottom: '20px',
