@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main
+      - "claude/dreamy-faraday-t63auj"
 
 jobs:
   deploy:
