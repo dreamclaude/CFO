@@ -72,7 +72,7 @@ export default function WhyUs() {
           >
             {/* Owner photo */}
             <img
-              src="/owner-photo.jpg"
+              src="/owner-photo.jpeg"
               alt="Nalin (Rukmal) Wijesooriya — CFO On The Go Pro"
               style={{
                 width: '100%',
