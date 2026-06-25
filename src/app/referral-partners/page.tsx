@@ -313,6 +313,9 @@ export default function ReferralPartnersPage() {
           padding: '56px 24px',
           borderTop: '1px solid rgba(27,42,74,0.8)',
           borderBottom: '1px solid rgba(27,42,74,0.8)',
+          marginTop: '-200px',
+          position: 'relative',
+          zIndex: 10,
         }}
       >
         <motion.div
