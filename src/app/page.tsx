@@ -8,6 +8,7 @@ import FastracSection from '@/components/FastracSection'
 import From30to10 from '@/components/From30to10'
 import WhoWeHelp from '@/components/WhoWeHelp'
 import SocialProof from '@/components/SocialProof'
+import GlobeSection from '@/components/GlobeSection'
 import CTABand from '@/components/CTABand'
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function HomePage() {
       <From30to10 />
       <WhoWeHelp />
       <SocialProof />
+      <GlobeSection />
       <CTABand />
     </>
   )
