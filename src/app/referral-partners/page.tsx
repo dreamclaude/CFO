@@ -398,7 +398,7 @@ export default function ReferralPartnersPage() {
       </section>
 
       {/* ── Client Benefits ────────────────────────────────────────── */}
-      <section style={{ backgroundColor: '#0A1628', padding: '112px 24px' }}>
+      <section style={{ backgroundColor: '#0A1628', padding: 'clamp(56px, 8vw, 112px) 24px' }}>
         <div
           ref={benefitsRef}
           style={{ maxWidth: '1100px', margin: '0 auto' }}
@@ -407,7 +407,7 @@ export default function ReferralPartnersPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: EASE_CINEMATIC }}
-            style={{ marginBottom: '72px' }}
+            style={{ marginBottom: '48px', textAlign: 'center' }}
           >
             <span
               style={{
@@ -417,7 +417,7 @@ export default function ReferralPartnersPage() {
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 display: 'block',
-                marginBottom: '18px',
+                marginBottom: '14px',
               }}
             >
               Why Refer to Us
@@ -430,6 +430,7 @@ export default function ReferralPartnersPage() {
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
                 maxWidth: '540px',
+                margin: '0 auto',
               }}
             >
               What Your Clients Receive
