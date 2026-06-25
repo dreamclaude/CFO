@@ -63,13 +63,14 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
     >
       {/* Large number — fluid size so it never overflows */}
       <div
+        className="step-number"
         style={{
           flexShrink: 0,
-          fontSize: 'clamp(30px, 7vw, 48px)',
+          fontSize: step.number.length > 5 ? 'clamp(18px, 4vw, 28px)' : 'clamp(30px, 7vw, 48px)',
           fontWeight: 900,
           color: step.accent,
           lineHeight: 1,
-          letterSpacing: '-2px',
+          letterSpacing: step.number.length > 5 ? '-0.5px' : '-2px',
           whiteSpace: 'nowrap',
         }}
       >
@@ -114,7 +115,7 @@ export default function TheShift() {
     <section
       style={{
         backgroundColor: '#F0F2F7',
-        padding: '108px 24px 80px',
+        padding: 'clamp(80px, 10vw, 120px) 24px 80px',
         position: 'relative',
         overflow: 'hidden',
       }}
