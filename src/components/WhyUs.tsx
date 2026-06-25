@@ -210,7 +210,7 @@ export default function WhyUs() {
               marginBottom: '36px',
             }}
           >
-            We bring CFO-level financial strategy - traditionally reserved for large corporations - directly into your personal wealth journey. For 30+ years, we've helped businesses achieve structured growth. Now we apply the same proven frameworks to families and investors.
+            We bring CFO-level financial strategy - traditionally reserved for large corporations - directly into your personal wealth journey. For 30+ years, we&apos;ve helped businesses achieve structured growth. Now we apply the same proven frameworks to families and investors.
           </p>
 
           {/* Credential pills */}

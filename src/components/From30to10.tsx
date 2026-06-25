@@ -236,7 +236,7 @@ export default function From30to10() {
               marginBottom: '40px',
             }}
           >
-            Most Australians accept a 30-year mortgage. We don't. With structure, discipline, and strategic modelling, many of our clients work toward becoming debt-free in 8 - 12 years while simultaneously building investment assets. That changes retirement. That changes freedom.
+            Most Australians accept a 30-year mortgage. We don&apos;t. With structure, discipline, and strategic modelling, many of our clients work toward becoming debt-free in 8 - 12 years while simultaneously building investment assets. That changes retirement. That changes freedom.
           </p>
 
           {/* Vertical timeline */}
