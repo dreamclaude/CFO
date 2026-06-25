@@ -92,7 +92,7 @@ function StatCard({
 
 export default function HeroHome() {
   return (
-    <section style={{ minHeight: '100vh', backgroundColor: '#0A1628', position: 'relative', overflow: 'hidden' }}>
+    <section style={{ minHeight: '100vh', backgroundColor: '#0A1628', position: 'relative', overflow: 'hidden', touchAction: 'pan-y' }}>
 
       {/* ── Background photo layer ── */}
       <div
@@ -150,13 +150,14 @@ export default function HeroHome() {
       >
 
         {/* ── LEFT: Text ── */}
-        <div className="hero-text" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+        <div style={{ paddingTop: '100px', paddingBottom: '60px' }} className="hero-left">
 
           {/* Credential pill */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
+            className="hero-pill"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '10px',
               background: 'rgba(25,149,196,0.12)',
@@ -281,6 +282,7 @@ export default function HeroHome() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
+            className="hero-trust"
             style={{
               display: 'flex', alignItems: 'center', gap: '0',
               borderTop: '1px solid rgba(255,255,255,0.08)',
@@ -419,13 +421,21 @@ export default function HeroHome() {
         @media (max-width: 900px) {
           .hero-grid {
             grid-template-columns: 1fr !important;
-            padding-top: 80px !important;
+            padding-top: 0 !important;
           }
           .hero-visual {
             display: none !important;
           }
         }
         @media (max-width: 640px) {
+          .hero-left {
+            padding-top: 28px !important;
+            padding-bottom: 40px !important;
+          }
+          .hero-pill span:last-child {
+            font-size: 10px !important;
+            letter-spacing: 0.08em !important;
+          }
           .hero-ctas {
             flex-direction: column !important;
             gap: 10px !important;
@@ -433,6 +443,12 @@ export default function HeroHome() {
           .hero-ctas a {
             width: 100% !important;
             justify-content: center !important;
+          }
+          .hero-trust {
+            gap: 0 !important;
+          }
+          .hero-trust > div {
+            flex: 1 !important;
           }
         }
       `}</style>
