@@ -15,6 +15,9 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      - name: Disable pnpm security check
+        run: pnpm config set minimum-release-age 0
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
