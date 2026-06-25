@@ -28,7 +28,7 @@ export default function From30to10() {
     <section
       style={{
         backgroundColor: '#132037',
-        padding: '108px 24px',
+        padding: 'clamp(48px, 8vw, 108px) 24px',
         position: 'relative',
         overflow: 'hidden',
       }}

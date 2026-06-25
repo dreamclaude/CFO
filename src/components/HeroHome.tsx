@@ -150,7 +150,7 @@ export default function HeroHome() {
       >
 
         {/* ── LEFT: Text ── */}
-        <div style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+        <div className="hero-text" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
 
           {/* Credential pill */}
           <motion.div
@@ -418,6 +418,10 @@ export default function HeroHome() {
         @media (max-width: 900px) {
           .hero-grid {
             grid-template-columns: 1fr !important;
+            align-items: flex-start !important;
+          }
+          .hero-text {
+            padding-top: 100px !important;
           }
           .hero-visual {
             display: none !important;

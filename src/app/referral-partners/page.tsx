@@ -159,7 +159,7 @@ function PartnerCard({ p, index, inView }: { p: typeof partnerTypes[0]; index: n
             color: 'rgba(255,255,255,0.82)',
             fontSize: '14px',
             lineHeight: 1.65,
-            maxHeight: hovered ? '80px' : '0px',
+            maxHeight: hovered ? '200px' : '0px',
             overflow: 'hidden',
             opacity: hovered ? 1 : 0,
             transition: 'max-height 0.45s ease, opacity 0.4s ease',

@@ -25,6 +25,15 @@ export default function WhyUs() {
         overflow: 'hidden',
       }}
     >
+      <style>{`
+        @media (max-width: 768px) {
+          .years-badge {
+            left: auto !important;
+            right: 20px !important;
+            bottom: -63px !important;
+          }
+        }
+      `}</style>
       {/* Background radial glow */}
       <div
         style={{
@@ -150,6 +159,7 @@ export default function WhyUs() {
 
           {/* Years stat badge */}
           <motion.div
+            className="years-badge"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -161,6 +171,7 @@ export default function WhyUs() {
               borderRadius: '16px',
               padding: '16px 24px',
               boxShadow: '0 12px 32px rgba(204,32,39,0.4)',
+              zIndex: 10,
             }}
           >
             <p style={{ fontSize: '32px', fontWeight: 900, color: 'white', lineHeight: 1 }}>30+</p>

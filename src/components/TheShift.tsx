@@ -38,6 +38,7 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
 
   return (
     <motion.div
+      className={step.number.length > 5 ? 'step-card-long' : ''}
       initial={{ opacity: 0, x: -40 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.55, delay: 0.3 + index * 0.12 }}
@@ -63,7 +64,7 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
       <div
         style={{
           minWidth: '72px',
-          fontSize: '52px',
+          fontSize: step.number.length > 5 ? 'clamp(32px, 8vw, 44px)' : '52px',
           fontWeight: 900,
           color: step.accent,
           lineHeight: 1,
@@ -74,12 +75,12 @@ function StepCard({ step, index, inView }: { step: typeof steps[0]; index: numbe
       </div>
 
       {/* Separator */}
-      <div style={{ fontSize: '24px', color: '#CBD5E1', fontWeight: 300, flexShrink: 0 }}>
+      <div className="step-arrow" style={{ fontSize: '24px', color: '#CBD5E1', fontWeight: 300, flexShrink: 0 }}>
         &rarr;
       </div>
 
       {/* Content */}
-      <div style={{ flex: 1 }}>
+      <div className="step-content" style={{ flex: 1 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
           {step.label && (
             <span style={{ fontSize: '15px', color: '#94A3B8', fontWeight: 500 }}>{step.label}</span>
@@ -129,6 +130,20 @@ export default function TheShift() {
         overflow: 'hidden',
       }}
     >
+      <style>{`
+        @media (max-width: 640px) {
+          .step-card-long {
+            flex-wrap: wrap;
+          }
+          .step-card-long .step-content {
+            min-width: 100% !important;
+            margin-top: -10px;
+          }
+          .step-card-long .step-arrow {
+            display: none;
+          }
+        }
+      `}</style>
       {/* Subtle diagonal accent at bottom */}
       <div
         style={{
